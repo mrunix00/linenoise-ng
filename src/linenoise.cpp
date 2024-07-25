@@ -133,7 +133,9 @@ using std::vector;
 using std::unique_ptr;
 using namespace linenoise_ng;
 
+#if __cplusplus <= 201709L
 typedef unsigned char char8_t;
+#endif
 
 static ConversionResult copyString8to32(char32_t* dst, size_t dstSize,
                                         size_t& dstCount, const char* src) {
